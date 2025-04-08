@@ -88,5 +88,68 @@ body {
     overflow-x: hidden;
 }
 
+.container {
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 /* ----------- header ------------ */
 
+.header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width:100%;
+    transition: 0.6s linear;
+    backdrop-filter: blur(20px);
+}
+
+.header.sticky {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    color: var(--first-color);
+    /* text-shadow: var(--third-color); */
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .6s linear;
+    padding: 18px 0;
+}
+
+nav.nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+ul.nav-menu {
+    display: flex;
+    gap: 50px;
+}
+
+.nav-link {
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--first-color);
+    font-size: var(--normal-font-size);
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: var(--third-color);
+}
+
+.nav-menu-btn {
+    display: none;
+}
